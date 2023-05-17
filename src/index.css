@@ -15,7 +15,7 @@
 body {
   margin: 0;
   background-color: #766a92;
-  color: EBD8FF;
+  color: #ebd8ff;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
@@ -28,7 +28,7 @@ body {
   width: 100%;
   font-weight: 600;
   font-size: 192px;
-  color: #ebd8ff;
+  /* color: #ebd8ff; */
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   user-select: none;

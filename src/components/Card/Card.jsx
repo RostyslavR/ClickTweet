@@ -6,6 +6,7 @@ import decor from "../../images/decor.png";
 import "./Card.css";
 
 const { VITE_AVATAR_URL } = import.meta.env;
+console.log(VITE_AVATAR_URL);
 
 const Card = (tweet) => {
   const { id, tweets, followers, avatar } = tweet;
@@ -13,7 +14,7 @@ const Card = (tweet) => {
   const currentUser = useCurrentUser((state) => state.currentUser);
   const setCurrentUser = useCurrentUser((state) => state.setCurrentUser);
   const setFollowing = useUserList((state) => state.setFollowing);
-  const aurl =  `${VITE_AVATAR_URL}/${avatar}`;
+  const aurl = `${VITE_AVATAR_URL}/${avatar}`;
   const [notActive, setNotActive] = useState(false);
 
   const handleFollowing = async () => {
