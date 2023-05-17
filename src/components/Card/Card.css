@@ -1,0 +1,123 @@
+.card {
+  position: relative;
+  width: 380px;
+  height: 460px;
+  background: linear-gradient(
+    114.99deg,
+    #471ca9 -0.99%,
+    #5736a3 54.28%,
+    #4b2a99 78.99%
+  );
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
+  user-select: none;
+}
+
+.logo {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 134px;
+}
+
+.decor {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.avatar-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.avatar-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-image: url("../../images/ellipse.png");
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+
+.line {
+  height: 8px;
+  flex-grow: 1;
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+    inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
+}
+
+.tweets {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ebd8ff;
+}
+
+.followers {
+  display: block;
+  text-align: center;
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ebd8ff;
+}
+
+.button {
+  /* display: block; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 14px 28px; */
+
+  width: 196px;
+  height: 50px;
+  margin: 0 auto;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+
+  background: #ebd8ff;
+  /* border: none; */
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  /* transform: translateY(-1px); */
+}
+
+.button:active {
+  background-color: #5cd3a8;
+  box-shadow: 0 5px #373737;
+  transform: translateY(2px);
+}
+
+.button.isFollowing {
+  background: #5cd3a8;
+}
+
+.notActive {
+  pointer-events: none;
+}

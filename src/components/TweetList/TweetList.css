@@ -1,0 +1,8 @@
+.tweetList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-height: 700px;
+  overflow-y: auto;
+}
