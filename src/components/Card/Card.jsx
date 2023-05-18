@@ -43,9 +43,7 @@ const Card = (tweet) => {
       <img src={logo} className="card-logo" alt="card logo" width={76} />
       <img src={decor} className="decor" alt="decor" width={308} />
       <div className="avatar-line">
-        <div className="circle">
-          <img src={aurl} className="avatar" alt="avatar" width={63} />
-        </div>
+        <img src={aurl} className="avatar" alt="avatar" width={63} />
       </div>
       <p className="tweets">{tweets.toLocaleString()} TWEETS</p>
       <p className="followers">{followers.toLocaleString()} FOLLOWERS</p>

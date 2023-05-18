@@ -4,7 +4,7 @@ import { ButtonLM } from "../components/ButtonLM/ButtonLM";
 
 const Tweets = () => {
   return (
-    <div className="tweets">
+    <div className="tweets-page">
       <TweetFilter />
       <TweetList />
       <ButtonLM />
