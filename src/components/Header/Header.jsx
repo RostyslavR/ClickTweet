@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import Logo from "../../images/logo.svg";
+import Logo from "../../images/click-tweet.svg";
 import "./Header.css";
 
 const Header = () => {
@@ -9,6 +9,7 @@ const Header = () => {
       <img
         src={Logo}
         alt="logo"
+        width={80}
         onClick={() => {
           navigate("/");
         }}

@@ -6,7 +6,6 @@ import decor from "../../images/decor.png";
 import "./Card.css";
 
 const { VITE_AVATAR_URL } = import.meta.env;
-console.log(VITE_AVATAR_URL);
 
 const Card = (tweet) => {
   const { id, tweets, followers, avatar } = tweet;
@@ -41,14 +40,12 @@ const Card = (tweet) => {
 
   return (
     <div className="card">
-      <img src={logo} className="logo" alt="logo" />
-      <img src={decor} className="decor" alt="decor" />
+      <img src={logo} className="card-logo" alt="card logo" width={76} />
+      <img src={decor} className="decor" alt="decor" width={308} />
       <div className="avatar-line">
-        <div className="line"></div>
-        <div className="avatar-bg">
-          <img src={aurl} className="avatar" alt="avatar" />
+        <div className="circle">
+          <img src={aurl} className="avatar" alt="avatar" width={63} />
         </div>
-        <div className="line"></div>
       </div>
       <p className="tweets">{tweets.toLocaleString()} TWEETS</p>
       <p className="followers">{followers.toLocaleString()} FOLLOWERS</p>

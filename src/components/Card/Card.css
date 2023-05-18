@@ -1,7 +1,8 @@
 .card {
   position: relative;
   width: 380px;
-  height: 460px;
+  height: 420px;
+  padding: 20px 0;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -13,10 +14,9 @@
   user-select: none;
 }
 
-.logo {
-  margin-top: 20px;
+.card-logo {
   margin-left: 20px;
-  margin-bottom: 134px;
+  margin-bottom: 136px;
 }
 
 .decor {
@@ -34,25 +34,33 @@
   margin-bottom: 26px;
 }
 
-.avatar-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  background-image: url("../../images/ellipse.png");
-
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: transparent;
-}
-
-.line {
-  height: 8px;
+.avatar-line:before,
+.avatar-line:after {
+  content: "";
   flex-grow: 1;
+  height: 8px;
   background: #ebd8ff;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
     inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+    inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
+}
+
+.avatar {
+  width: 62px;
+  height: 62px;
+  background-color: #5736a3;
+  border-radius: 50%;
 }
 
 .tweets {
@@ -63,7 +71,6 @@
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #ebd8ff;
 }
 
 .followers {
@@ -74,17 +81,12 @@
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #ebd8ff;
 }
 
 .button {
-  /* display: block; */
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding: 14px 28px; */
-
   width: 196px;
   height: 50px;
   margin: 0 auto;
@@ -94,18 +96,13 @@
   line-height: 22px;
   text-transform: uppercase;
   color: #373737;
-
   background: #ebd8ff;
-  /* border: none; */
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
-  cursor: pointer;
-  user-select: none;
 }
 
 .button:hover {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  /* transform: translateY(-1px); */
 }
 
 .button:active {
