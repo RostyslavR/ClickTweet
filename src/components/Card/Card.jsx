@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { iUser } from "../../services/iAxios";
 import { useCurrentUser, useUserList } from "../../services/store";
-import logo from "../../images/logo.svg";
-import decor from "../../images/decor.png";
+import logo from "../../images/logo-card.svg";
+import decor from "../../images/decor-card.png";
 import "./Card.css";
 
 const { VITE_AVATAR_URL } = import.meta.env;

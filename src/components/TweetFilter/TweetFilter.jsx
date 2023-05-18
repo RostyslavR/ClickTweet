@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useFilter } from "../../services/store";
+import "./TweetFilter.css";
 
 export const TweetFilter = () => {
   const navigate = useNavigate();
@@ -7,6 +8,7 @@ export const TweetFilter = () => {
   return (
     <div className="filter">
       <button
+        className="buttonBack"
         onClick={() => {
           navigate("/");
         }}

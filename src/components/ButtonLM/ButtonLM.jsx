@@ -1,6 +1,6 @@
 import { iUser } from "../../services/iAxios";
 import { useUserList, useCurrentUser } from "../../services/store";
-import "./Button.css";
+import "./ButtonLM.css";
 
 export const ButtonLM = () => {
   const currentUser = useCurrentUser((state) => state.currentUser);
@@ -33,7 +33,7 @@ export const ButtonLM = () => {
   return isLoading ? (
     <div>Loadin...</div>
   ) : (
-    <button type="button" onClick={handleLoadMore}>
+    <button className="buttonLM" type="button" onClick={handleLoadMore}>
       Load more
     </button>
   );
