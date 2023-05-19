@@ -2,6 +2,7 @@ import { lazy, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useCurrentUser } from "./services/store";
 import { autoSignIn } from "./services/autoSignIn";
+import { Loader } from "./components/Loader/Loader";
 
 import { Layout } from "./components/Layuot/Layout";
 
@@ -18,7 +19,7 @@ function App() {
   }, []);
 
   if (!currentUser) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
@@ -31,7 +32,5 @@ function App() {
     </Routes>
   );
 }
-
-
 
 export default App;
