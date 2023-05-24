@@ -5,10 +5,8 @@ import "./ButtonLM.css";
 
 export const ButtonLM = () => {
   const currentUser = useCurrentUser((state) => state.currentUser);
-  const addUserList = useUserList((state) => state.addUserList);
-  const getPage = useUserList((state) => state.getPage);
-  const isLoading = useUserList((state) => state.isLoading);
-  const setIsLoading = useUserList((state) => state.setIsLoading);
+  const { addUserList, getPage, isLoading, setIsLoading, setEofList } =
+    useUserList();
 
   const handleLoadMore = async () => {
     const page = getPage() + 1;
@@ -18,13 +16,15 @@ export const ButtonLM = () => {
       const { data } = await iUser.get("/users", {
         params: { page, l: 3 },
       });
-      const list = data
-        .filter((user) => user.id !== currentUser.id)
-        .map((user) => {
+      if (data.length > 0) {
+        const list = data.map((user) => {
           user.following = currentUser.follow_list.includes(user.id);
           return user;
         });
-      addUserList(list);
+        addUserList(list);
+      } else {
+        setEofList(true);
+      }
       setIsLoading(false);
     } catch (e) {
       console.log(e);

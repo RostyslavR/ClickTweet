@@ -10,6 +10,7 @@ export const useUserList = create((set, get) => ({
   isLoading: false,
   error: null,
   page: 1,
+  eofList: false,
   setUserList: (value) => set({ userList: [...value] }),
 
   addUserList: (value) => {
@@ -39,6 +40,7 @@ export const useUserList = create((set, get) => ({
 
   setIsLoading: (value) => set({ isLoading: value }),
   setError: (value) => set({ error: value }),
+  setEofList: (value) => set({ eofList: value }),
   incPage: () => set((state) => ({ page: state.page + 1 })),
   setPage: (value) => set({ page: value }),
   getPage: () => {

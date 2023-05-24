@@ -7,7 +7,7 @@ import { Card } from "../Card/Card";
 
 export const TweetList = () => {
   const currentUser = useCurrentUser((state) => state.currentUser);
-  const { setUserList, page, setPage, setIsLoading } = useUserList();
+  const { setUserList, setPage, setIsLoading } = useUserList();
   const filter = useFilter((state) => state.filter);
   const userList = useUserList((state) => state.userList);
 
@@ -15,19 +15,14 @@ export const TweetList = () => {
     if (userList.length === 0) {
       setIsLoading(true);
       setPage(1);
-
-      if (page !== 1) {
-        return;
-      }
       try {
         const { data } = await iUser.get("/users", {
-          params: { page, l: 3 },
+          params: { page: 1, l: 3 },
         });
         const list = data.map((user) => {
           user.following = currentUser.follow_list.includes(user.id);
           return user;
         });
-
         setUserList(list);
         setIsLoading(false);
       } catch (e) {
