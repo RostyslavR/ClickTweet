@@ -12,7 +12,10 @@ const Card = (tweet) => {
   const currentUser = useCurrentUser((state) => state.currentUser);
   const setCurrentUser = useCurrentUser((state) => state.setCurrentUser);
   const setFollowing = useUserList((state) => state.setFollowing);
+
   const aurl = `${VITE_AVATAR_URL}/${avatar}`;
+  console.log(aurl);
+
   const [active, setActive] = useState(true);
 
   const handleFollowing = async () => {
