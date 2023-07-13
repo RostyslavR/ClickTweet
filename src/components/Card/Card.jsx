@@ -15,7 +15,6 @@ const Card = (tweet) => {
 
   // const aurl = `${VITE_AVATAR_URL}/${avatar}`;
   const aurl = new URL(`${VITE_AVATAR_URL}/${avatar}`, import.meta.url);
-  console.log(aurl);
   const [active, setActive] = useState(true);
 
   const handleFollowing = async () => {
