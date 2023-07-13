@@ -5,7 +5,7 @@ import logo from "../../images/logo-card.svg";
 import "./Card.css";
 
 // const { VITE_AVATAR_URL } = import.meta.env;
-const VITE_AVATAR_URL = "../../images/avatars";
+const VITE_AVATAR_URL = "/avatars";
 
 const Card = (tweet) => {
   const { id, tweets, followers, avatar, following } = tweet;
